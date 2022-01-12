@@ -1,13 +1,5 @@
-﻿Readme.txt
-
-P05: Knowledge Graph Based on Movies
-
-Group Members :
-
-Anirudh Jakhotia - S20190010007 - anirudh.j19@iiits.in
-Harish Mullagura - S20190010124 - harish.m19@iiits.in
-Neeraj Dusa - S20190010047 - neeraj.d19@iiits.in
-V Venkata Kalyan - S20190010193 -venkatakalyan.v19@iiits.in
+﻿# Knowledge Graph Based on Movies
+## An Information-Retrieval Project
  
 The dataset is obtained from https://drive.google.com/drive/folders/1IpCO8C6V2puZLx5CTgy3HAV7Zps6nF6F 
 
@@ -20,11 +12,11 @@ How to run the code :
 5) It also gives the movie recommendation by preprocessing by replacing Nan values with 0 and then taking user vote ratings and number of users voted. After that we use knn for nearest neighbors and by creating a function fet_movie_recommendation we get the movie recommendation similar to the given movie.
 
 
-Problem Statement :
-Information Extraction is a process of extracting information in a more structured way i.e., the information which is machine-understandable. 
-It consists of sub-fields that cannot be easily solved. Therefore, an approach to store data in a structured manner is required for easier access.
+## Problem Statement :
+- Information Extraction is a process of extracting information in a more structured way i.e., the information which is machine-understandable. 
+- It consists of sub-fields that cannot be easily solved. Therefore, an approach to store data in a structured manner is required for easier access.
 
-Problem Solution:
+## Problem Solution:
 * Knowledge Graph is a structured way in which a set of three-item sets called Triple is used. 
 Here, the set combines a subject, a predicate, and an object. 
 
@@ -106,3 +98,10 @@ However, we restricted ourselves to using sentences with exactly 2 entities. Eve
 We have described how KGs can help IR by discussing several entity-centric IR tasks and the role of KGs in each. 
 Specifically, we discussed entity linking, document retrieval, entity retrieval, entity recommendation, and relationship explanation.
 Thus, we were able to build a Knowledge graph for the movie's dataset.
+
+Group Members :
+
+Anirudh Jakhotia - S20190010007 - anirudh.j19@iiits.in
+Harish Mullagura - S20190010124 - harish.m19@iiits.in
+Neeraj Dusa - S20190010047 - neeraj.d19@iiits.in
+V Venkata Kalyan - S20190010193 -venkatakalyan.v19@iiits.in
