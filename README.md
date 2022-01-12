@@ -57,9 +57,9 @@ For example, in the sentence – “Sixty Hollywood musicals were released in 19
 We will finally create a knowledge graph from the extracted entities (subject-object pairs) and the predicates (relation between entities).
 kg_df = pd.DataFrame({'source':source, 'target':target, 'edge':relations})
 
-- Based on the data crawled and collected for Actors and Movies, I created a knowledge graph to perform "Entity-Entity pair based on Relation" Query.
-- The sentences were tokenized and the Entity-Relation-Entity were identified and put into the Knowledge Graph
-- The knowledge graph was visualized using Networkx
+   - Based on the data crawled and collected for Actors and Movies, I created a knowledge graph to perform "Entity-Entity pair based on Relation" Query.
+   - The sentences were tokenized and the Entity-Relation-Entity were identified and put into the Knowledge Graph
+   - The knowledge graph was visualized using Networkx
 
 6) Removing Noise from the data
 We will reduce the noise by adding some filters for the final dataset.
@@ -76,7 +76,7 @@ We will be using the KNN algorithm to compute similarity with cosine distance me
 knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=20, n_jobs=-1)
 knn.fit(csr_data)
 
-9)Making the recommendation function
+9) Making the recommendation function
 get_movie_recommendation('Iron Man')
 
 
