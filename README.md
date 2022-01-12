@@ -28,32 +28,37 @@ Here, the set combines a subject, a predicate, and an object.
 - The dataset is obtained from https://drive.google.com/drive/folders/1IpCO8C6V2puZLx5CTgy3HAV7Zps6nF6F 
 
 1) Hit the URL: https://colab.research.google.com/drive/1MVY538WLcRjCzgGO_mpvwcpYhwngwy2s?usp=sharing
+
 2) After opening the code, In the left menu bar select files and upload the dataset.
+
 3) Either leave the default path that works or copy the path of dataset in the candidate_sentences = pd.read_csv("/content/wiki_sentences_v2.csv")
+
 4) Once the data is loaded the code gives the knowledge graphs of movies like singers, writers and movies released. 
+
 5) It also gives the movie recommendation by preprocessing by replacing Nan values with 0 and then taking user vote ratings and number of users voted. After that we use knn for nearest neighbors and by creating a function fet_movie_recommendation we get the movie recommendation similar to the given movie.
 
-For more details about the project please refer to [**"Project Description.pdf"**][1]
+**For more details about the project please refer to [**"Project Description.pdf"**][1]**
 
 [1]: https://github.com/anirudhjak06/Knowledge-Graph-Based-on-Movies/blob/main/Project%20Description.pdf "Title"
 
 
 ## Functionalities and Components of the project:
 
-1) Import Libraries
-Import re,pd,bs4,requests,spacy.
+<pre>
+1) Import Libraries :
+Import re, pd, bs4, requests, spacy.
 
-2) Read Data
+2) Read Data :
 Read the CSV file containing the Wikipedia sentences
 
-3) Entity Pairs Extraction
+3) Entity Pairs Extraction :
  To build a knowledge graph, the most important things are the nodes and the edges between them.
 These nodes are going to be the entities that are present in the Wikipedia sentences. Edges are the relationships connecting these entities to one another. We will extract these elements in an unsupervised manner, i.e., we will use the grammar of the sentences.
 
-4) Relation / Predicate Extraction
+4) Relation / Predicate Extraction :
 For example, in the sentence – “Sixty Hollywood musicals were released in 1929”, the verb is “released in” and this is what we are going to use as the predicate for the triple generated from this sentence.
 
-5) Build a Knowledge Graph
+5) Build a Knowledge Graph :
 We will finally create a knowledge graph from the extracted entities (subject-object pairs) and the predicates (relation between entities).
 kg_df = pd.DataFrame({'source':source, 'target':target, 'edge':relations})
 
@@ -61,24 +66,24 @@ kg_df = pd.DataFrame({'source':source, 'target':target, 'edge':relations})
    - The sentences were tokenized and the Entity-Relation-Entity were identified and put into the Knowledge Graph
    - The knowledge graph was visualized using Networkx
 
-6) Removing Noise from the data
+6) Removing Noise from the data :
 We will reduce the noise by adding some filters for the final dataset.
-* To qualify a movie, a minimum of 10 users should have voted for a movie.
-* To qualify a user, a minimum of 50 movies should have been voted by the user.
+   - To qualify a movie, a minimum of 10 users should have voted for a movie.
+   - To qualify a user, a minimum of 50 movies should have been voted by the user.
 
-7) Removing sparsity
-Applying the csr_matrix method to the dataset :
+7) Removing sparsity :
+Applying the csr_matrix method to the dataset 
 csr_data = csr_matrix(final_dataset.values)
 final_dataset.reset_index(inplace=True)
 
-8) Making the movie recommendation system model
+8) Making the movie recommendation system model :
 We will be using the KNN algorithm to compute similarity with cosine distance metric which is very fast and more preferable than pearson coefficient.
 knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=20, n_jobs=-1)
 knn.fit(csr_data)
 
 9) Making the recommendation function
 get_movie_recommendation('Iron Man')
-
+</pre>
 
 ## Conclusion:
 We extracted information from a given text in the form of triples and build a knowledge graph from it. 
