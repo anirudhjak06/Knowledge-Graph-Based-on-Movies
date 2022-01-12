@@ -57,22 +57,17 @@ kg_df = pd.DataFrame({'source':source, 'target':target, 'edge':relations})
 - The sentences were tokenized and the Entity-Relation-Entity were identified and put into the Knowledge Graph
 - The knowledge graph was visualized using Networkx
 
-
 6) Removing Noise from the data
 We will reduce the noise by adding some filters for the final dataset.
 * To qualify a movie, a minimum of 10 users should have voted for a movie.
 * To qualify a user, a minimum of 50 movies should have been voted by the user.
 
-
 7) Removing sparsity
-
 Applying the csr_matrix method to the dataset :
 csr_data = csr_matrix(final_dataset.values)
 final_dataset.reset_index(inplace=True)
 
-
 8) Making the movie recommendation system model
-
 We will be using the KNN algorithm to compute similarity with cosine distance metric which is very fast and more preferable than pearson coefficient.
 knn = NearestNeighbors(metric='cosine', algorithm='brute', n_neighbors=20, n_jobs=-1)
 knn.fit(csr_data)
@@ -84,6 +79,7 @@ get_movie_recommendation('Iron Man')
 ## Conclusion:
 We extracted information from a given text in the form of triples and build a knowledge graph from it. 
 However, we restricted ourselves to using sentences with exactly 2 entities. Even then we were able to build quite informative knowledge graphs. 
+
 We have described how KGs can help IR by discussing several entity-centric IR tasks and the role of KGs in each. 
 Specifically, we discussed entity linking, document retrieval, entity retrieval, entity recommendation, and relationship explanation.
 Thus, we were able to build a Knowledge graph for the movie's dataset.
