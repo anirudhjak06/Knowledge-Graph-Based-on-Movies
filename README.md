@@ -69,8 +69,8 @@ We will finally create a knowledge graph from the extracted entities (subject-ob
 the predicates (relation between entities).
 kg_df = pd.DataFrame({'source':source, 'target':target, 'edge':relations})
 
-   - Based on the data crawled and collected for Actors and Movies, 
-    I created a knowledge graph to perform "Entity-Entity pair based on Relation" Query.
+   - Based on the data crawled and collected for Actors and Movies, I created a knowledge graph 
+      to perform "Entity-Entity pair based on Relation" Query.
    - The sentences were tokenized and the Entity-Relation-Entity were identified 
       and put into the Knowledge Graph
    - The knowledge graph was visualized using Networkx
