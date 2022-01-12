@@ -33,6 +33,10 @@ Here, the set combines a subject, a predicate, and an object.
 4) Once the data is loaded the code gives the knowledge graphs of movies like singers, writers and movies released. 
 5) It also gives the movie recommendation by preprocessing by replacing Nan values with 0 and then taking user vote ratings and number of users voted. After that we use knn for nearest neighbors and by creating a function fet_movie_recommendation we get the movie recommendation similar to the given movie.
 
+For more details about the project please refer to [**"Project Description.pdf"**][1]
+
+[1]: https://github.com/anirudhjak06/Knowledge-Graph-Based-on-Movies/blob/main/Project%20Description.pdf "Title"
+
 
 ## Functionalities and Components of the project:
 
