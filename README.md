@@ -109,6 +109,6 @@ Thus, we were able to build a Knowledge graph for the movie's dataset.
 <pre>
 Anirudh Jakhotia - S20190010007 - anirudh.j19@iiits.in
 Harish Mullagura - S20190010124 - harish.m19@iiits.in
-Neeraj Dusa - S20190010047 - neeraj.d19@iiits.in
-V Venkata Kalyan - S20190010193 -venkatakalyan.v19@iiits.in
+Neeraj Dusa      - S20190010047 - neeraj.d19@iiits.in
+V Venkata Kalyan - S20190010193 - venkatakalyan.v19@iiits.in
 </pre>
